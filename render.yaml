@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: mzplay-live-engine
+    env: node
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: PUPPETEER_CACHE_DIR
+        value: /opt/render/project/src/.cache/puppeteer
+        
